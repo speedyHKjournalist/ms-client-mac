@@ -32,7 +32,13 @@ git clone https://github.com/filoper/ms-client.git
 ```
 
 ### Dependencies
-Download the required NX files from here [https://github.com/HeavenClient/HeavenClient/tree/master#required-files](https://github.com/HeavenClient/HeavenClient/tree/master#required-files)
+Download the required NX files from:  
+
+[https://mega.nz/file/3SxiRBDA#j_0_Hg_GqB2-MbK6OsQd4zlVq0nmgd9OYKrE1U4_PcA](https://mega.nz/file/3SxiRBDA#j_0_Hg_GqB2-MbK6OsQd4zlVq0nmgd9OYKrE1U4_PcA)  
+
+[https://mega.nz/file/HCJnQaiJ#mSSV6452km6X5UHQqKdzmldqXY2UAbzVsExPHh7c9c4](https://mega.nz/file/HCJnQaiJ#mSSV6452km6X5UHQqKdzmldqXY2UAbzVsExPHh7c9c4)  
+
+Place NX files in the msclient folder.  
 
 See install instructions for your platform below.
 
