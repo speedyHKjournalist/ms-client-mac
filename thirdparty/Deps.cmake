@@ -48,7 +48,7 @@ IF (WIN32)
 
     FetchContent_Declare(
       lz4
-      URL               https://github.com/lz4/lz4/archive/v1.9.3.zip
+      URL               https://github.com/lz4/lz4/archive/v1.9.4.zip
       URL_MD5           72defe037b2c3db7a69affe7fe4bffd6
       PREFIX            "${PROJECT_SOURCE_DIR}/thirdparty"
       SOURCE_DIR        "${PROJECT_SOURCE_DIR}/thirdparty/lz4"
