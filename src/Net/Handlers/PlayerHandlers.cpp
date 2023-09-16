@@ -26,6 +26,7 @@
 #include "IO/UITypes/UIChatBar.h"
 #include "LoginPackets.h"
 #include "Net/PacketProcessor.h"
+#include "Packets/GameplayPackets.h"
 
 namespace ms {
 namespace {
@@ -104,6 +105,19 @@ bool ChangeStatsHandler::handle_stat(MapleStat::Id stat, InPacket &recv) const {
             player.change_level(recv.read_ubyte());
             break;
         case MapleStat::Id::JOB: player.change_job(recv.read_ushort()); break;
+        case MapleStat::Id::HP: {
+            int16_t current_hp = recv.read_short();
+            player.get_stats().set_stat(stat, current_hp);
+            recalculate = true;
+            if (current_hp <= 0) { 
+                player.set_state(Char::State::DIED);
+                bool died = true;
+                int32_t targetid = 0;
+                ChangeMapPacket changeMap(died, targetid, "sp", false);
+                changeMap.dispatch();
+            }
+            break;
+        }
         case MapleStat::Id::EXP:
             player.get_stats().set_exp(recv.read_int());
             break;
